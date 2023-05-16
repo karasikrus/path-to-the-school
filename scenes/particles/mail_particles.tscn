@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://wj74i3ve45sf"]
+
+[ext_resource type="Texture2D" uid="uid://dgnf37iq5eldx" path="res://scenes/particles/letters.png" id="1_xceuo"]
+[ext_resource type="Script" path="res://scenes/particles/mail_particles.gd" id="2_88x0p"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_upgi4"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id="Gradient_1yh4f"]
+offsets = PackedFloat32Array(0, 0.595349, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.627907, 1, 1, 1, 0)
+
+[node name="MailParticles" type="CPUParticles2D"]
+material = SubResource("CanvasItemMaterial_upgi4")
+amount = 13
+lifetime = 1.5
+randomness = 0.26
+texture = ExtResource("1_xceuo")
+direction = Vector2(0, -1)
+spread = 31.27
+gravity = Vector2(0, 300)
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+angular_velocity_min = 67.02
+angular_velocity_max = 198.93
+color_ramp = SubResource("Gradient_1yh4f")
+anim_speed_min = 4.0
+anim_speed_max = 4.0
+script = ExtResource("2_88x0p")

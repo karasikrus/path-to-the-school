@@ -1,0 +1,140 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkfh2tkyq53jp"]
+
+[ext_resource type="FontFile" uid="uid://b0uqyb5ociqt5" path="res://scenes/ui/Neucha-Regular.ttf" id="1_giy7c"]
+[ext_resource type="Script" path="res://scenes/titles/titles.gd" id="1_x05ou"]
+[ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="3_mcgny"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8p3o"]
+bg_color = Color(0.290196, 0.00784314, 0.415686, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.145098, 0.121569, 0.52549, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing_size = 3.318
+
+[node name="Titles" type="CanvasLayer"]
+script = ExtResource("1_x05ou")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.215686, 0.376471, 0.478431, 1)
+
+[node name="SceneChangerComponent" parent="." instance=ExtResource("3_mcgny")]
+next_scene_path = "res://scenes/dialog_scenes/dialog_scene_start.tscn"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+custom_minimum_size = Vector2(1200, 1000)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_giy7c")
+theme_override_font_sizes/font_size = 85
+text = "Спасибо за игру!
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="RichTextLabel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("1_giy7c")
+theme_override_fonts/bold_font = ExtResource("1_giy7c")
+theme_override_fonts/italics_font = ExtResource("1_giy7c")
+theme_override_fonts/bold_italics_font = ExtResource("1_giy7c")
+theme_override_fonts/mono_font = ExtResource("1_giy7c")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+theme_override_font_sizes/mono_font_size = 50
+bbcode_enabled = true
+text = "Игру сделали   [rainbow]Алиса[/rainbow],  [color=e8c810][tornado]Антон[/tornado][/color]   и   [color=1fed8d][wave]Ваня[/wave][/color]."
+
+[node name="Label3" type="RichTextLabel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("1_giy7c")
+theme_override_fonts/bold_font = ExtResource("1_giy7c")
+theme_override_fonts/italics_font = ExtResource("1_giy7c")
+theme_override_fonts/bold_italics_font = ExtResource("1_giy7c")
+theme_override_fonts/mono_font = ExtResource("1_giy7c")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+theme_override_font_sizes/mono_font_size = 50
+bbcode_enabled = true
+text = "Музыка от [color=#907adc][shake]roonfru[/shake][/color]  vk.com/roonfru"
+
+[node name="Label4" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_giy7c")
+theme_override_font_sizes/font_size = 40
+text = "Звуки:
+Snow step 9 - Created by Unlistenable from Freesound.org
+Pop 7 - Created by greenvwbeetle from Freesound.org
+Wind gust - Created by wintuh from Freesound.org
+Sweep-008.wav - Created by raaghav81 from Freesound.org
+
+"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(200, 100)
+offset_left = 1313.0
+offset_top = 856.0
+offset_right = 1530.0
+offset_bottom = 956.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_x8p3o")
+action_mode = 0
+text = "Повторить?"
+alignment = 2
+icon_alignment = 2

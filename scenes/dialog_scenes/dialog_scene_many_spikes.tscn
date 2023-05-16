@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://gsaxopg776c5"]
+
+[ext_resource type="Script" path="res://scenes/dialog_scenes/dialog_scene.gd" id="1_csnj4"]
+[ext_resource type="PackedScene" uid="uid://bn5n22kmgu0ui" path="res://scenes/novel_background/novel_background.tscn" id="2_458r2"]
+[ext_resource type="PackedScene" uid="uid://cbx00ultrj0mj" path="res://scenes/dialog_box/dialog_box.tscn" id="3_8l8df"]
+[ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="4_wv6gg"]
+
+[node name="DialogScene" type="Node"]
+script = ExtResource("1_csnj4")
+
+[node name="NovelBackground" parent="." instance=ExtResource("2_458r2")]
+
+[node name="DialogBox" parent="." instance=ExtResource("3_8l8df")]
+dialog_path = "res://dialogs/dialog_many_spikes.json"
+
+[node name="SceneChangerComponent" parent="." instance=ExtResource("4_wv6gg")]
+next_scene_path = "res://scenes/level/level_many_spikes.tscn"

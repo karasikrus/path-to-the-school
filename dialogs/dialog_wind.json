@@ -1,0 +1,37 @@
+[
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "До этого как раз снег выпал - пришлось по сугробам пробираться."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "А тут еще и буран. Сильный [tornado radius=10.0 freq=1.0][i][b]ветер[/b][/i][/tornado] прямо в лицо бил. Даже дышать было тяжело!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Кошмар, а не погода!"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "А почему ты просто не остался дома?"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Это только сейчас разрешают в таких случаях в школу не ходить."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "А раньше вообще пропускать было нельзя."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Ливень на дворе или снег - книжки ремнем стянул и иди…"
+ }
+]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://qdpo1hsreb6b"]
+
+[ext_resource type="Script" path="res://scenes/bullet/bullet.gd" id="1_exbx2"]
+[ext_resource type="Texture2D" uid="uid://cw21tnfi1sv50" path="res://scenes/bullet/bullet.png" id="2_gsi0o"]
+[ext_resource type="AudioStream" uid="uid://dqvh3usbw7pje" path="res://scenes/audio/328118__greenvwbeetle__pop-7.mp3" id="3_nywce"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_re520"]
+radius = 11.0
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 32
+collision_mask = 21
+script = ExtResource("1_exbx2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gsi0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_re520")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nywce")
+bus = &"sfx"

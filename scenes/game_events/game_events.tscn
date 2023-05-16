@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cleq8ylc0pijw"]
+
+[ext_resource type="Script" path="res://scenes/game_events/game_events.gd" id="1_jhi5k"]
+[ext_resource type="PackedScene" uid="uid://ddowfd8jso7og" path="res://scenes/dialog_scenes/after_death_dialog_scene.tscn" id="2_4d5kg"]
+
+[node name="GameEvents" type="Node"]
+process_mode = 3
+script = ExtResource("1_jhi5k")
+death_dialog_scene = ExtResource("2_4d5kg")

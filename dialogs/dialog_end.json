@@ -1,0 +1,52 @@
+[
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "...и принцесса так обрадовалась, когда письмо получила."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Благодарила меня, обнимала, книжки там свои показывала…"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Так ты в итоге в школу-то попал?"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "А? Чего?"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Ну, ты же рассказывал, что в школу как-то раз шёл."
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_sleeping.png",
+  "text": "Снега навалом, ветер в лицо, утки, фонари, колья…"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "А, ты про эту историю."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Я тебе её когда-нибудь расскажу. Но не сегодня."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "А сейчас - спать."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "[b]Добрых снов, солнышко[/b]."
+ }
+]

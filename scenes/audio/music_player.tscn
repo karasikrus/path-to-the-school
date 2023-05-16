@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqli3m8ja4myj"]
+
+[ext_resource type="AudioStream" uid="uid://bg0fsvkatfsni" path="res://scenes/audio/roonfru - spring.mp3" id="1_gjs83"]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_gjs83")
+autoplay = true
+bus = &"music"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://fg5apvaqkabk"]
+
+[ext_resource type="Script" path="res://scenes/dialog_scenes/final.gd" id="1_63rgu"]
+[ext_resource type="Texture2D" uid="uid://n3jy8hc2oo7b" path="res://portraits/ending_wide1.png" id="2_bkecd"]
+[ext_resource type="PackedScene" uid="uid://bn5n22kmgu0ui" path="res://scenes/novel_background/novel_background.tscn" id="2_jo813"]
+[ext_resource type="Texture2D" uid="uid://c2vx7bfq5pw2x" path="res://portraits/ending_wide2.png" id="3_gybj6"]
+[ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="4_flo2v"]
+[ext_resource type="AudioStream" uid="uid://bmlhfobbp56k2" path="res://scenes/audio/night.mp3" id="5_3la35"]
+
+[node name="DialogScene" type="Node"]
+script = ExtResource("1_63rgu")
+
+[node name="NovelBackground" parent="." instance=ExtResource("2_jo813")]
+
+[node name="TextureRect" parent="NovelBackground" index="1"]
+texture = ExtResource("2_bkecd")
+
+[node name="TextureRect2" parent="NovelBackground" index="2"]
+texture = ExtResource("3_gybj6")
+
+[node name="SceneChangerComponent" parent="." instance=ExtResource("4_flo2v")]
+next_scene_path = "res://scenes/titles/titles.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3la35")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.5
+one_shot = true
+autostart = true
+
+[editable path="NovelBackground"]

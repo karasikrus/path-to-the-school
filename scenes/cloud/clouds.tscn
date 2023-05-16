@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyrbqalr6w5r"]
+
+[ext_resource type="PackedScene" uid="uid://8usl88pokjok" path="res://scenes/cloud/cloud.tscn" id="1_mpdkl"]
+[ext_resource type="Texture2D" uid="uid://wxaqtlyop48i" path="res://scenes/cloud/Облака.png" id="2_sp58k"]
+
+[node name="Clouds" type="Node2D"]
+z_index = -5
+
+[node name="Cloud" parent="." instance=ExtResource("1_mpdkl")]
+speed = 0.05
+
+[node name="Sprite2D" parent="Cloud" index="1"]
+texture = ExtResource("2_sp58k")
+region_enabled = true
+region_rect = Rect2(163.5, 4.07972, 540, 152.42)
+
+[node name="Cloud2" parent="." instance=ExtResource("1_mpdkl")]
+position = Vector2(0, 92)
+speed = 0.05
+start_position = 0.4
+
+[node name="Sprite2D" parent="Cloud2" index="1"]
+texture = ExtResource("2_sp58k")
+region_enabled = true
+region_rect = Rect2(13.1501, 154.125, 813.12, 227.185)
+
+[node name="Cloud3" parent="." instance=ExtResource("1_mpdkl")]
+position = Vector2(-22, 175)
+speed = 0.05
+start_position = 0.76
+
+[node name="Sprite2D" parent="Cloud3" index="1"]
+texture = ExtResource("2_sp58k")
+region_enabled = true
+region_rect = Rect2(129.936, 378.21, 570.454, 168.295)
+
+[node name="Cloud4" parent="." instance=ExtResource("1_mpdkl")]
+position = Vector2(-22, -25)
+speed = 0.06
+start_position = 0.6
+
+[node name="Sprite2D" parent="Cloud4" index="1"]
+texture = ExtResource("2_sp58k")
+region_enabled = true
+region_rect = Rect2(129.936, 378.21, 570.454, 168.295)
+
+[editable path="Cloud"]
+[editable path="Cloud2"]
+[editable path="Cloud3"]
+[editable path="Cloud4"]

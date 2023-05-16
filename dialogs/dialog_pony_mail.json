@@ -1,0 +1,32 @@
+[
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Рассыпал я в итоге всю перловку, но…"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Деда, а что в то время делал единорожка?"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "Как что? [i][b]Почту доставлял[/b][/i], конечно."
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Но единороги не доставляют почту. Ты меня обманываешь!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Как я тебя могу обманывать?"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Своими глазами видел: этот единорог бегал по селу и письма разносил!"
+ }
+]

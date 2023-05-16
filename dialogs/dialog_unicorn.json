@@ -1,0 +1,47 @@
+[
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Деда, мне что-то не нравится эта история…"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "В смысле? Там же был [rainbow][i][b]пони[/b][/i][/rainbow]!"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Какой пони?..."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Тебе бы он понравился."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Очень был похож на твою игрушку. Прямо копия."
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Но у меня же [rainbow]единорог![/rainbow]"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "А, ну да, я это и имел в виду."
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "[wave]Правда??[/wave] Он был настоящим??"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Конечно!"
+ }
+]

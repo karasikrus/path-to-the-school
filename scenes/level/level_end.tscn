@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3wu3o27qcsa2"]
+
+[ext_resource type="Script" path="res://scenes/level/level_end.gd" id="1_2sp18"]
+[ext_resource type="PackedScene" uid="uid://cqli3m8ja4myj" path="res://scenes/audio/music_player.tscn" id="2_2vwej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhpd2"]
+size = Vector2(131, 316)
+
+[node name="LevelEnd" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_2sp18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -158)
+shape = SubResource("RectangleShape2D_vhpd2")
+
+[node name="MusicPlayer" parent="." instance=ExtResource("2_2vwej")]

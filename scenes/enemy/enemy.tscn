@@ -1,0 +1,227 @@
+[gd_scene load_steps=12 format=3 uid="uid://dnvtmuib7ul7"]
+
+[ext_resource type="Script" path="res://scenes/enemy/Enemy.gd" id="1_l6mmm"]
+[ext_resource type="Texture2D" uid="uid://dpfsf411u4fnt" path="res://scenes/enemy/bad_boy.png" id="2_7yakg"]
+[ext_resource type="Shader" path="res://scenes/player/flash_hit.gdshader" id="2_imfav"]
+[ext_resource type="Texture2D" uid="uid://dt57jvd03uys8" path="res://scenes/enemy/ducks.png" id="3_flxo8"]
+[ext_resource type="Texture2D" uid="uid://cwmaf1pqxpou5" path="res://scenes/enemy/Candy_dragon.png" id="4_gggts"]
+
+[sub_resource type="Animation" id="Animation_5nctp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -30)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:material:shader_parameter/lerp_percent")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:material:shader_parameter/alpha")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_vto85"]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, -30), Vector2(-15, -60)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 4
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.35447]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:material:shader_parameter/lerp_percent")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:material:shader_parameter/alpha")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qxgcd"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eioth"]
+_data = {
+"RESET": SubResource("Animation_5nctp"),
+"death": SubResource("Animation_vto85"),
+"walk": SubResource("Animation_qxgcd")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8sg2i"]
+resource_local_to_scene = true
+shader = ExtResource("2_imfav")
+shader_parameter/lerp_percent = 0.0
+shader_parameter/color = Color(0.768627, 0.882353, 0.964706, 1)
+shader_parameter/alpha = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kd82d"]
+radius = 28.0
+height = 100.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 16
+script = ExtResource("1_l6mmm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "walk"
+libraries = {
+"": SubResource("AnimationLibrary_eioth")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_8sg2i")
+position = Vector2(1, -30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7yakg")
+hframes = 2
+frame = 1
+
+[node name="Sprite2D_bad_guy" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, -30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7yakg")
+hframes = 2
+frame = 1
+
+[node name="Sprite2D_duck" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, -30)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_flxo8")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="Sprite2D_dragon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, -30)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("4_gggts")
+flip_h = true
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -24)
+shape = SubResource("CapsuleShape2D_kd82d")
+
+[node name="RayCastFrontForward" type="RayCast2D" parent="."]
+position = Vector2(30, -13)
+rotation = -1.5708
+target_position = Vector2(0, 20)
+collision_mask = 5
+
+[node name="RayCastFrontDown" type="RayCast2D" parent="."]
+position = Vector2(29, -13)
+target_position = Vector2(0, 45)

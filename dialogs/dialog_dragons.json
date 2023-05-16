@@ -1,0 +1,42 @@
+[
+ {
+  "name": "Внучка",
+  "image": "girl_sleeping.png",
+  "text": "*зевает*"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Ну все, ну все, засыпаешь уже. Пора спать…"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Деда, но я хочу дослушать, что случилось с пони!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Ну ладно-ладно."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Как он выпрыгнул из своих розовых облаков, так я и рот разинул."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Он сказал, что не может из-за конфетных дракончиков письмо доставить одной умной принцессе."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Поэтому помощи моей попросил."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "[i][b]Тогда я надел сверкающие доспехи, вскочил на этого единорога и поскакал...[/b][/i]"
+ }
+]

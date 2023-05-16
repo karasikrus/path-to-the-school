@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5wbbf7c4n4ty"]
+
+[ext_resource type="Texture2D" uid="uid://d8qnfbroxucp" path="res://scenes/effects/wind.png" id="1_5eh1f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbjss"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv4g0"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leb3p"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnc37"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgo5y"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e2e4"]
+atlas = ExtResource("1_5eh1f")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjea2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbjss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv4g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leb3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnc37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgo5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e2e4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WindParticles" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(267, 260)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(795, 377)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(210, 812)
+scale = Vector2(1.1, 1.1)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.405753
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(1287, 129)
+skew = -0.0977384
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.405753
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(1215, 668)
+rotation = 0.0558505
+scale = Vector2(0.6, 0.6)
+skew = 0.125664
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.405753
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+position = Vector2(1277, 1055)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.405753
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+position = Vector2(783, 831)
+rotation = 0.0558505
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.405753
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="."]
+position = Vector2(1688, 708)
+rotation = -0.167552
+scale = Vector2(0.78, 0.78)
+sprite_frames = SubResource("SpriteFrames_fjea2")
+autoplay = "default"
+frame_progress = 0.463009

@@ -1,0 +1,72 @@
+[
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Погоди, деда!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Я не испугался,  и так им и эдак! А они все не отстают и не отстают."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Каждому досталось!"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Ты бил других детей? Сам же говорил, что драться - это плохо!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "Э-э…нет, чего это я, совсем по-другому было."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Я хотел сказать, каждому досталась порция перловки!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "Мне столько [i][b]уток[/b][/i] навстречу шло, сосчитать не мог…"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_normal.png",
+  "text": "Ты что, везде с собой таскал перловку?"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "Нет, конечно!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Просто тогда перед выходом в сенях из мешка решил взять, чтобы по дороге пожевать."
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_pouting.png",
+  "text": "Сырую? И вообще, какие утки? Была же зима!"
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_worried.png",
+  "text": "Ну так, понимаешь, вылетели они со своего юга и время не рассчитали. Рано вернулись."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "А как прилетели - так и снег выпал."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_smiling.png",
+  "text": "А мне жалко стало, решил их [i][b]покормить[/b][/i] перловкой. "
+ }
+]

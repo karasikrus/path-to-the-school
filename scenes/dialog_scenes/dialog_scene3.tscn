@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://twpccdmw6t8w"]
+
+[ext_resource type="Script" path="res://scenes/dialog_scenes/dialog_scene.gd" id="1_q1ug5"]
+[ext_resource type="PackedScene" uid="uid://cbx00ultrj0mj" path="res://scenes/dialog_box/dialog_box.tscn" id="2_84yjy"]
+[ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="3_68osi"]
+
+[node name="DialogScene" type="Node"]
+script = ExtResource("1_q1ug5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.376471, 0.294118, 0.12549, 1)
+
+[node name="DialogBox" parent="." instance=ExtResource("2_84yjy")]
+dialog_path = "res://dialogs/dialog3.json"
+
+[node name="SceneChangerComponent" parent="." instance=ExtResource("3_68osi")]

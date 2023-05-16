@@ -1,0 +1,5 @@
+[
+	{"name": "Внучка", "image": "girl_pouting.png", "position": "right", "text": "И что? Мне тоже далеко до школы идти!"},
+	{"name": "Дедушка", "image": "grandfather_smiling.png", "position": "left", "text": "Понимаешь, там еще была на пути такая глубокая яма, что мне приходилось перепрыгивать через нее!"},
+	{"name": "Дедушка", "image": "grandfather_smiling.png", "position": "left", "text": "Представляешь, как жутко было? Я думал, что вот-вот свалюсь туда!"}
+]

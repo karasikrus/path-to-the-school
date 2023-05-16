@@ -1,0 +1,22 @@
+[
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Подхожу я, значит, уже в соседнему селу, а тут мне навстречу [i][b]пацаны-старшеклассники[/b][/i]."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "И взгляд у них недобрый такой, и рогатки в руках."
+ },
+ {
+  "name": "Дедушка",
+  "image": "grandfather_speaking.png",
+  "text": "Ну я и подумал, что на [i][b]драку[/b][/i] нарываются…"
+ },
+ {
+  "name": "Внучка",
+  "image": "girl_sleeping.png",
+  "text": "Ага..."
+ }
+]

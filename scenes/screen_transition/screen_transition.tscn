@@ -1,0 +1,131 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmwe8h7c7a4xx"]
+
+[ext_resource type="Shader" path="res://scenes/screen_transition/screen_transition.gdshader" id="1_3oqwl"]
+[ext_resource type="Script" path="res://scenes/screen_transition/screen_transition.gd" id="2_k8ayy"]
+
+[sub_resource type="Animation" id="Animation_kdkmf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/dissolve_state")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.01]
+}
+
+[sub_resource type="Animation" id="Animation_qke4v"]
+resource_name = "in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/dissolve_state")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.01, 0.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emit_transition_finished"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5tbdg"]
+resource_name = "out"
+step = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/dissolve_state")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 2.14355),
+"update": 0,
+"values": [0.0, 1.01]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.499, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"unpause_game"
+}, {
+"args": [],
+"method": &"emit_transition_finished"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfdoc"]
+_data = {
+"RESET": SubResource("Animation_kdkmf"),
+"in": SubResource("Animation_qke4v"),
+"out": SubResource("Animation_5tbdg")
+}
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_80grf"]
+seed = 6
+frequency = 0.021
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ikuqu"]
+noise = SubResource("FastNoiseLite_80grf")
+
+[sub_resource type="Gradient" id="Gradient_fijno"]
+offsets = PackedFloat32Array(0, 0.480519, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.82684, 0.82684, 0.82684, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cs1ki"]
+gradient = SubResource("Gradient_fijno")
+fill = 1
+fill_from = Vector2(0.521368, 0.525641)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3qcs"]
+shader = ExtResource("1_3oqwl")
+shader_parameter/dissolve_state = 1.01
+shader_parameter/dissolve_pattern = SubResource("NoiseTexture2D_ikuqu")
+shader_parameter/dissolve_pattern_extra = SubResource("GradientTexture2D_cs1ki")
+
+[node name="ScreenTransition" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("2_k8ayy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bfdoc")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+z_index = 100
+material = SubResource("ShaderMaterial_p3qcs")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.843137, 0.905882, 1, 1)

@@ -1,0 +1,5 @@
+[
+	{"name": "Дедушка", "image": "sketch_old_man.png", "position": "left", "text": "Ну и ну. Вот это я сказанул, конечно"},
+	{"name": "Внучка", "image": "girl.png", "position": "right", "text": "Да уж. Давно я [color=271104][wave]такого[/wave][/color] не слышала"},
+	{"name": "Дедушка", "image": "sketch_old_man.png", "position": "left", "text": "Извини, сейчас начну сначала"}
+]
