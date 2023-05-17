@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bn5n22kmgu0ui"]
+[gd_scene load_steps=7 format=3 uid="uid://bn5n22kmgu0ui"]
 
 [ext_resource type="Texture2D" uid="uid://6nkpr2756nj8" path="res://portraits/fireplace_wide1.png" id="1_6seh2"]
 [ext_resource type="Texture2D" uid="uid://db1ry4xnpqwji" path="res://portraits/fireplace_wide2.png" id="2_27e51"]
+[ext_resource type="PackedScene" uid="uid://5xcjthmlnbd4" path="res://scenes/audio/music_player_novel.tscn" id="3_fidox"]
 
 [sub_resource type="Animation" id="Animation_o7ngk"]
 length = 0.001
@@ -94,3 +95,5 @@ size_flags_vertical = 3
 texture = ExtResource("2_27e51")
 expand_mode = 2
 stretch_mode = 2
+
+[node name="MusicPlayer" parent="." instance=ExtResource("3_fidox")]

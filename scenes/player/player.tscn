@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dbsh38pa0vi" path="res://scenes/ui/pause_menu_openner.tscn" id="2_b5b6u"]
 [ext_resource type="Shader" path="res://scenes/player/flash_hit.gdshader" id="2_goyb6"]
 [ext_resource type="PackedScene" uid="uid://b3ywwlmm7imhi" path="res://scenes/components/hurtbox_component.tscn" id="3_28717"]
-[ext_resource type="Texture2D" uid="uid://bsf8r35016puw" path="res://scenes/player/ded.png" id="4_xkbqa"]
+[ext_resource type="Texture2D" uid="uid://b6312s270xe0w" path="res://scenes/player/player.png" id="4_6hflh"]
 [ext_resource type="AudioStream" uid="uid://tnq326ptypdx" path="res://scenes/audio/419455__unlistenable__snow-step-9.wav" id="6_us3xf"]
 [ext_resource type="AudioStream" uid="uid://r2feo75t0c3f" path="res://scenes/audio/277231__raaghav81__sweep-008.wav" id="7_fjfpr"]
 
@@ -297,7 +297,7 @@ libraries = {
 material = SubResource("ShaderMaterial_xvdde")
 position = Vector2(-7, -64)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_xkbqa")
+texture = ExtResource("4_6hflh")
 flip_h = true
 hframes = 7
 vframes = 2
@@ -328,7 +328,7 @@ shape = SubResource("CapsuleShape2D_2bxxb")
 debug_color = Color(0.901961, 0.305882, 0.176471, 0.419608)
 
 [node name="GunPoint" type="Node2D" parent="."]
-position = Vector2(44, -54)
+position = Vector2(51, -54)
 
 [node name="foot_steps" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_us3xf")

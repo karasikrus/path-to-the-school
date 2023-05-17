@@ -56,7 +56,10 @@ func on_platform_end():
 func hit_by_bullet():
 	is_dead = true
 	collision_shape_2d.set_deferred("disabled", true)
-	animation_player.play("death")
+	if current_enemy_type == enemy_type.duck:
+		animation_player.play("death_duck")
+	else:
+		animation_player.play("death")
 	await animation_player.animation_finished
 	enemy_died.emit()
 	queue_free()
@@ -66,10 +69,12 @@ func set_sprite():
 	var sprite: Sprite2D = sprite_2d_bad_guy
 	if current_enemy_type == enemy_type.duck:
 		sprite = sprite_2d_duck
+		sprite.hframes = 4
 	elif current_enemy_type == enemy_type.dragon:
 		sprite = sprite_2d_dragon
 	
 	sprite_2d.texture = sprite.texture
 	sprite_2d.scale = sprite.scale
 	sprite_2d.flip_h = sprite.flip_h
+	sprite_2d.hframes = sprite.hframes
 	

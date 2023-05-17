@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xcjthmlnbd4"]
+
+[ext_resource type="AudioStream" uid="uid://cgdy5sru13at3" path="res://scenes/audio/novel.mp3" id="1_rt3s3"]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_rt3s3")
+autoplay = true
+bus = &"music"

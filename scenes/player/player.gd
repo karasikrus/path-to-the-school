@@ -337,7 +337,8 @@ func shoot_logic():
 		
 		var bullet_instance = scene.instantiate() as Bullet
 		owner.add_child(bullet_instance)
-		bullet_instance.position = position + gun_point.position
+		bullet_instance.position = position + \
+			Vector2(gun_point.position.x * face_direction, gun_point.position.y)
 		bullet_instance.direction = Vector2.RIGHT * face_direction
 		if unicorn:
 			bullet_instance.randomize_sprite()
