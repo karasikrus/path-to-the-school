@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://caqr8ed0imub2"]
+[gd_scene load_steps=8 format=3 uid="uid://caqr8ed0imub2"]
 
 [ext_resource type="PackedScene" uid="uid://cseaflhkcvjxw" path="res://scenes/background/background.tscn" id="1_njq21"]
 [ext_resource type="PackedScene" uid="uid://d1f6h17qmrwue" path="res://scenes/tilemap/tile_map.tscn" id="2_2yogh"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brecpge76orou" path="res://scenes/player/player.tscn" id="4_mov5f"]
 [ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="5_ku5p6"]
 [ext_resource type="PackedScene" uid="uid://d3wu3o27qcsa2" path="res://scenes/level/level_end.tscn" id="7_8nem7"]
+[ext_resource type="PackedScene" uid="uid://cygq1ccy770vs" path="res://scenes/tutorial_window/tutorial_window.tscn" id="7_t0fny"]
 
 [node name="Level" type="Node2D"]
 
@@ -26,3 +27,6 @@ next_scene_path = "res://scenes/dialog_scenes/dialog_scene_before_pit.tscn"
 
 [node name="LevelEnd" parent="." instance=ExtResource("7_8nem7")]
 position = Vector2(1949, 1064)
+
+[node name="TutorialWindow" parent="." instance=ExtResource("7_t0fny")]
+size_flags_horizontal = 4

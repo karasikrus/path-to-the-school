@@ -1,0 +1,193 @@
+[gd_scene load_steps=10 format=3 uid="uid://bliycf00jd0e7"]
+
+[ext_resource type="Script" path="res://scenes/tutorial_window/tutorial_window.gd" id="1_e1f1t"]
+[ext_resource type="FontFile" uid="uid://b0uqyb5ociqt5" path="res://scenes/ui/Neucha-Regular.ttf" id="2_tstb7"]
+[ext_resource type="PackedScene" uid="uid://u1m56100go16" path="res://scenes/tutorial_window/tutorial_button_medium.tscn" id="3_kt8cf"]
+
+[sub_resource type="Animation" id="Animation_vkchh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l0p23"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.420448),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0oo13"]
+resource_name = "start"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hcwmq"]
+_data = {
+"RESET": SubResource("Animation_vkchh"),
+"default": SubResource("Animation_l0p23"),
+"start": SubResource("Animation_0oo13")
+}
+
+[sub_resource type="Theme" id="Theme_7wkiu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwceg"]
+content_margin_left = 100.0
+content_margin_top = 100.0
+content_margin_right = 100.0
+content_margin_bottom = 100.0
+bg_color = Color(0.380392, 0, 0.447059, 0.792157)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.501961, 0, 0.584314, 0)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 961.0
+offset_top = 979.0
+offset_right = 961.0
+offset_bottom = 979.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1f1t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "start"
+libraries = {
+"": SubResource("AnimationLibrary_hcwmq")
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+modulate = Color(1, 1, 1, 0.847059)
+custom_minimum_size = Vector2(700, 300)
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_7wkiu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwceg")
+
+[node name="TextLabel" type="Label" parent="MarginContainer/Panel"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -305.0
+offset_top = 60.0
+offset_right = 295.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_tstb7")
+theme_override_font_sizes/font_size = 40
+text = "Стрельба"
+horizontal_alignment = 1
+
+[node name="TextLabel2" type="Label" parent="MarginContainer/Panel"]
+custom_minimum_size = Vector2(600, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -304.0
+offset_top = 146.0
+offset_right = 296.0
+offset_bottom = 196.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_tstb7")
+theme_override_font_sizes/font_size = 35
+text = "или"
+horizontal_alignment = 1
+
+[node name="tutorial_button_short3" parent="MarginContainer/Panel" instance=ExtResource("3_kt8cf")]
+layout_mode = 1
+offset_left = -313.0
+offset_top = -53.0
+offset_right = 375.0
+offset_bottom = 252.0
+scale = Vector2(0.5, 0.5)
+
+[node name="tutorial_button_short4" parent="MarginContainer/Panel" instance=ExtResource("3_kt8cf")]
+layout_mode = 1
+offset_left = -42.0
+offset_top = -53.0
+offset_right = 646.0
+offset_bottom = 252.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" parent="MarginContainer/Panel/tutorial_button_short4" index="0"]
+offset_left = -100.0
+offset_top = -70.5
+offset_right = 147.0
+offset_bottom = 60.5
+text = "Enter"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[editable path="MarginContainer/Panel/tutorial_button_short4"]

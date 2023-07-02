@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bf7t3pjner3hd"]
+[gd_scene load_steps=8 format=3 uid="uid://bf7t3pjner3hd"]
 
 [ext_resource type="PackedScene" uid="uid://cseaflhkcvjxw" path="res://scenes/background/background.tscn" id="1_8io80"]
 [ext_resource type="PackedScene" uid="uid://d1f6h17qmrwue" path="res://scenes/tilemap/tile_map.tscn" id="2_k0qm3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://brecpge76orou" path="res://scenes/player/player.tscn" id="4_tst2f"]
 [ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="5_2gs4l"]
 [ext_resource type="PackedScene" uid="uid://d3wu3o27qcsa2" path="res://scenes/level/level_end.tscn" id="7_l8mve"]
+[ext_resource type="PackedScene" uid="uid://cwkd2bp3newne" path="res://scenes/tutorial_window/tutorial_window_jump.tscn" id="7_n3gkk"]
 
 [node name="Level" type="Node2D"]
 
@@ -26,3 +27,5 @@ next_scene_path = "res://scenes/dialog_scenes/dialog_scene_before_spike_pit.tscn
 
 [node name="LevelEnd" parent="." instance=ExtResource("7_l8mve")]
 position = Vector2(1949, 1064)
+
+[node name="Control" parent="." instance=ExtResource("7_n3gkk")]

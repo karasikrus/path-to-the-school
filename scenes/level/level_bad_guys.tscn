@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmvjll6v7q4e2"]
+[gd_scene load_steps=10 format=3 uid="uid://dmvjll6v7q4e2"]
 
 [ext_resource type="PackedScene" uid="uid://cseaflhkcvjxw" path="res://scenes/background/background.tscn" id="1_8uuap"]
 [ext_resource type="Script" path="res://scenes/level/level_bad_guys.gd" id="1_bqlhd"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bhuy0ut1mwgvo" path="res://scenes/components/scene_changer_component.tscn" id="5_hydlc"]
 [ext_resource type="PackedScene" uid="uid://d3wu3o27qcsa2" path="res://scenes/level/level_end.tscn" id="7_u6j4g"]
 [ext_resource type="PackedScene" uid="uid://dnvtmuib7ul7" path="res://scenes/enemy/enemy.tscn" id="8_4lu67"]
+[ext_resource type="PackedScene" uid="uid://bliycf00jd0e7" path="res://scenes/tutorial_window/tutorial_window_shoot.tscn" id="9_boi00"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_bqlhd")
@@ -45,3 +46,5 @@ position = Vector2(510, 494)
 
 [node name="Enemy4" parent="Entities" instance=ExtResource("8_4lu67")]
 position = Vector2(907, 166)
+
+[node name="Control" parent="." instance=ExtResource("9_boi00")]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg0vkl17qxdg3"]
+
+[ext_resource type="Texture2D" uid="uid://1c3moi6mbhgb" path="res://scenes/tutorial_window/key short.png" id="1_7ldhk"]
+[ext_resource type="FontFile" uid="uid://b0uqyb5ociqt5" path="res://scenes/ui/Neucha-Regular.ttf" id="2_t2nqd"]
+
+[node name="tutorial_button_short" type="TextureRect"]
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -344.0
+offset_top = -152.5
+offset_right = 344.0
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7ldhk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -61.5
+offset_right = 41.0
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.173758, 0.187123, 0.277344, 1)
+theme_override_fonts/font = ExtResource("2_t2nqd")
+theme_override_font_sizes/font_size = 120
+text = "A"
